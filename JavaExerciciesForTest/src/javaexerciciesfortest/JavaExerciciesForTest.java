@@ -107,6 +107,15 @@ public class JavaExerciciesForTest {
         // Imprimir uma linha em branco entre as matrizes
 
         System.out.println();
+        
+                // Imprimir a matriz duplicada
+
+        for (int i = 0; i < novaMatrizDuplicada.length; i++) {
+            for (int j = 0; j < novaMatrizDuplicada.length; j++) {
+                System.out.print(novaMatrizDuplicada[i][j] + "\t");
+            }
+            System.out.println();
+        }
     
         
         
