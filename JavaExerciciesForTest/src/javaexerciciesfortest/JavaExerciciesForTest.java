@@ -27,6 +27,15 @@ public class JavaExerciciesForTest {
             }
         }
         
+        // Imprimir a matriz após preenchimento
+        System.out.println("Matriz Preenchida");
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                System.out.println(matriz[i][j] + "\t");
+            }
+            System.out.println(); // Quebra de linha após cada linha da matriz
+        }
+        
         /*
         for (int i = 0; i <matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
