@@ -95,6 +95,18 @@ public class JavaExerciciesForTest {
                 novaMatrizDuplicada[i][j] = matrizRefeita[i][j] * multiplicador;
             }
         }
+        
+        // Imprimir a matriz original Refeita
+        for (int i = 0; i < matrizRefeita.length; i++) {
+            for (int j = 0; j < matrizRefeita.length; j++) {
+                System.out.print(matrizRefeita[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        
+        // Imprimir uma linha em branco entre as matrizes
+
+        System.out.println();
     
         
         
