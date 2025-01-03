@@ -64,13 +64,13 @@ public class JavaExerciciesForTest {
         
         // Pergunta ao usuário o número de linhas, colunas e valor para multiplicar
 
-        System.out.print("Defina o numero de linhas da matriz");
+        System.out.print("Defina o numero de linhas da matriz : ");
         int linhas = scanner.nextInt();
         
-        System.out.print("Defina o numero de Colunas da Matriz");
+        System.out.print("Defina o numero de Colunas da Matriz : ");
         int colunas = scanner.nextInt();
         
-        System.out.print("Defina o valor a multiplicar");
+        System.out.print("Defina o valor a multiplicar : ");
         int multiplicador = scanner.nextInt();
         
         
@@ -83,7 +83,7 @@ public class JavaExerciciesForTest {
         
         for (int i = 0; i < matrizRefeita.length; i++) {
             for (int j = 0; j < novaMatrizDuplicada.length; j++) {
-                System.out.print("Digite os Valores para a Posição ["+ i +"]["+ j +"]");
+                System.out.print("Digite os Valores para a Posição ["+ i +"]["+ j +"] : ");
                 matrizRefeita[i][j] = scanner.nextInt();
             }
         }
