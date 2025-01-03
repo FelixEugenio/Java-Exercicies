@@ -90,7 +90,12 @@ public class JavaExerciciesForTest {
         
     // Preencher a matrizDuplicada com os valores multiplicados
 
-        
+        for (int i = 0; i < matrizRefeita.length; i++) {
+            for (int j = 0; j < matrizRefeita.length; j++) {
+                novaMatrizDuplicada[i][j] = matrizRefeita[i][j] * multiplicador;
+            }
+        }
+    
         
         
         
