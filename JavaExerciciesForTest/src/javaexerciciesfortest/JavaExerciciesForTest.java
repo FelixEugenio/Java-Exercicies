@@ -60,8 +60,16 @@ public class JavaExerciciesForTest {
             System.out.println();
         }
  
-
+        //Refaça todos estes exercícios perguntando inicialmente ao utilizador o número de linhas, onúmero de colunas e o valor a multiplicar
         
+        System.out.print("Defina o numero de linhas da matriz");
+        int linhas = scanner.nextInt();
+        
+        System.out.print("Defina o numero de Colunas da Matriz");
+        int colunas = scanner.nextInt();
+        
+        System.out.print("Defina o valor a multiplicar");
+        int multiplicador = scanner.nextInt();
         /*
         for (int i = 0; i <matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
