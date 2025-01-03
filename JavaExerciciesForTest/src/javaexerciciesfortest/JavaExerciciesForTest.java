@@ -15,7 +15,7 @@ public class JavaExerciciesForTest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        Scanner scanner = new Scanner(System.in);
         
     }
     
