@@ -27,14 +27,40 @@ public class JavaExerciciesForTest {
             }
         }
         
+                 System.out.println();
+
         // Imprimir a matriz após preenchimento
         System.out.println("Matriz Preenchida");
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
-                System.out.println(matriz[i][j] + "\t");
+                System.out.print(matriz[i][j] + "\t");
             }
             System.out.println(); // Quebra de linha após cada linha da matriz
         }
+        
+        //Defina uma segunda matriz com a mesma dimensão
+
+        int[][] novaMatriz = new int[3][3];
+        
+         // Preencher a matrizDuplicada com o dobro dos valores da matrizOriginal
+         
+         for (int i = 0; i < matriz.length; i++) {
+             for (int j = 0; j < matriz.length; j++) {
+                 novaMatriz[i][j] = matriz[i][j] * 2;
+             }
+        }
+         System.out.println();
+                 // Imprimir a matriz duplicada
+                 System.out.println("\nNova Matriz dubplicada");
+        for (int i = 0; i < novaMatriz.length; i++) {
+            for (int j = 0; j < novaMatriz.length; j++) {
+                System.out.print(novaMatriz[i][j] + "\t");
+            }
+            
+            System.out.println();
+        }
+ 
+
         
         /*
         for (int i = 0; i <matriz.length; i++) {
