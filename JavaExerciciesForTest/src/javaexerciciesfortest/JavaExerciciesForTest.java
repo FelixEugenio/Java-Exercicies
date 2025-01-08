@@ -11,12 +11,21 @@ import java.util.Scanner;
  */
 public class JavaExerciciesForTest {
 
-    /**
-     * @param args the command line arguments
-     */
+    public static float CalcularMediaPonderada(float valor1, float valor2){
+        
+        float peso1 = 0.4f;
+        float peso2 = 0.79f;
+        
+        float mediaPonderada = valor1  * peso1  + valor2 * peso2;
+        return mediaPonderada;
+        
+    }
+    
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int[][] matriz = new int[3][3]; //define a variável matriz como um array de 2 dimensões com 3*3 elementos
+        
+        /*
+        //Scanner scanner = new Scanner(System.in);
+       // int[][] matriz = new int[3][3]; //define a variável matriz como um array de 2 dimensões com 3*3 elementos
         
         //Podemos preencher e imprimir todos os elementos da matriz com dois ciclos encadeados 
         
@@ -116,10 +125,6 @@ public class JavaExerciciesForTest {
             }
             System.out.println();
         }
-    
-        
-        
-        
         
         
         /*
@@ -132,5 +137,16 @@ public class JavaExerciciesForTest {
             System.out.println("");
         }
 */
+        
+        
+        //dispositivos ate as funcoes 
+        
+        float nota1 =  (float) (1 + Math.random() * (5 -1));
+        float nota2 =  (float) (1 + Math.random() * (5 -1));
+        
+        float media = CalcularMediaPonderada(nota1, nota2);
+        
+        System.out.println(media);
+        
     }
 }
