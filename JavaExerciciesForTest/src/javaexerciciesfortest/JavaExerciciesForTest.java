@@ -64,8 +64,21 @@ public class JavaExerciciesForTest {
          }
          
          return maior;
+     }
+     
+     public static int calcularAPosicaoDoMaiorValorDoArray(int[] array){
          
          
+         int posicao = 0;
+         
+          // Percorre o array a partir do segundo elemento
+         for (int i = 0; i < array.length; i++) {
+             if (array[i] > array[posicao]) {
+                 posicao = i;
+             }
+         }
+         
+         return posicao;
      }
     
     @SuppressWarnings("empty-statement")
@@ -222,11 +235,16 @@ public class JavaExerciciesForTest {
      float raio =  (float) (1 + Math.random() * (5 -1));
         
         System.out.println("a area de um circulo é " + calcularAreaDeUmCirculo(raio));   
-        */
+        
         
         int[] array = {1,2,3,45,56,7,9};
         
         System.out.println("o maior valor do array é " + calcularOMaiorValorDoArray(array));
+        */
+        int[] array = {1,2,3,45,56,7,9};
+        int posicao = calcularAPosicaoDoMaiorValorDoArray(array);
+        
+        System.out.println("a posicao do maior valor do array é " + posicao);
         
     }
 }
