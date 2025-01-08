@@ -43,6 +43,13 @@ public class JavaExerciciesForTest {
          
          return perimetro = 2 * pi * raio;
      }
+     
+     public static float calcularAreaDeUmCirculo(float raio){
+         float area;
+         float pi = (float) Math.PI;
+         
+         return area =  (float) (pi * Math.pow(raio, 2));
+     }
     
     public static void main(String[] args) {
         
@@ -187,11 +194,17 @@ public class JavaExerciciesForTest {
          for (int indice = 0; indice < lista.length; indice++) {
                 System.out.printf("lista[%d]=%d\n",indice,lista[indice]);
         }
-        */
+      
         
         float raio =  (float) (1 + Math.random() * (5 -1));
         
         System.out.println("o perimetro de um circulo é " + calcularPerimetroDeUmCirculo(raio));
+        
+  */
+     float raio =  (float) (1 + Math.random() * (5 -1));
+        
+        System.out.println("a area de um circulo é " + calcularAreaDeUmCirculo(raio));   
+        
         
     }
 }
