@@ -21,6 +21,22 @@ public class JavaExerciciesForTest {
         
     }
     
+     public static void testa_parametro(int[] lista1){
+            System.out.println("dentro da funcao");
+            
+            for (int indice = 0; indice < lista1.length; indice++) {
+                System.out.printf("lista1[%d]=%d\n",indice,lista1[indice]);
+            }
+            
+            for (int indice = 0; indice < lista1.length; indice++) {
+                lista1[indice] = 10 + indice;
+            }
+            
+             for (int indice = 0; indice < lista1.length; indice++) {
+                System.out.printf("lista1[%d]=%d\n",indice,lista1[indice]);
+            }
+        }
+    
     public static void main(String[] args) {
         
         /*
@@ -136,7 +152,7 @@ public class JavaExerciciesForTest {
             
             System.out.println("");
         }
-*/
+
         
         
         //dispositivos ate as funcoes 
@@ -147,6 +163,24 @@ public class JavaExerciciesForTest {
         float media = CalcularMediaPonderada(nota1, nota2);
         
         System.out.println(media);
+        
+*/
+        
+     int[] lista = {1,2,3};
+     
+        System.out.println("antes de chamar a funcao");
+         for (int indice = 0; indice < lista.length; indice++) {
+                System.out.printf("lista[%d]=%d\n",indice,lista[indice]);
+        }
+         
+         testa_parametro(lista);
+         
+         System.out.println("depois de chamar a funcao");
+         System.out.println("antes de chamar a funcao");
+         for (int indice = 0; indice < lista.length; indice++) {
+                System.out.printf("lista[%d]=%d\n",indice,lista[indice]);
+        }
+        
         
     }
 }
