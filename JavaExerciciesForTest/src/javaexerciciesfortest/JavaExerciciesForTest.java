@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package javaexerciciesfortest;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -79,6 +80,20 @@ public class JavaExerciciesForTest {
          }
          
          return posicao;
+     }
+     
+     public static void OrdenarArrayDeManeiraCrescente(int[] array){
+          // Percorre todo array 
+         for (int i = 0; i < array.length - 1; i++) {
+              // Percorre o array até o elemento não ordenado
+             for (int j = 0; j < array.length -1 - i; j++) {
+                 if (array[j] > array[j + 1]) {
+                     int temp = array[j];
+                     array[j] = array[j + 1];
+                     array[j + 1] = temp;
+                 }
+             }
+         }
      }
     
     @SuppressWarnings("empty-statement")
@@ -240,11 +255,22 @@ public class JavaExerciciesForTest {
         int[] array = {1,2,3,45,56,7,9};
         
         System.out.println("o maior valor do array é " + calcularOMaiorValorDoArray(array));
-        */
+        
         int[] array = {1,2,3,45,56,7,9};
         int posicao = calcularAPosicaoDoMaiorValorDoArray(array);
         
         System.out.println("a posicao do maior valor do array é " + posicao);
+        */
+        
+        int[] numeros = {9, 2, 5, 1, 7, 3, 4};
+        System.out.println("mostrar o array desordenado");
+        System.out.println(Arrays.toString(numeros));
+        
+        
+        OrdenarArrayDeManeiraCrescente(numeros);
+        
+        System.out.println("mostrar o array ordenado");
+        System.out.println(Arrays.toString(numeros));
         
     }
 }
