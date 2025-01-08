@@ -36,6 +36,13 @@ public class JavaExerciciesForTest {
                 System.out.printf("lista1[%d]=%d\n",indice,lista1[indice]);
             }
         }
+     
+     public static float calcularPerimetroDeUmCirculo(float raio){
+         float perimetro;
+         float pi = (float) Math.PI;
+         
+         return perimetro = 2 * pi * raio;
+     }
     
     public static void main(String[] args) {
         
@@ -164,7 +171,7 @@ public class JavaExerciciesForTest {
         
         System.out.println(media);
         
-*/
+
         
      int[] lista = {1,2,3};
      
@@ -180,7 +187,11 @@ public class JavaExerciciesForTest {
          for (int indice = 0; indice < lista.length; indice++) {
                 System.out.printf("lista[%d]=%d\n",indice,lista[indice]);
         }
+        */
         
+        float raio =  (float) (1 + Math.random() * (5 -1));
+        
+        System.out.println("o perimetro de um circulo é " + calcularPerimetroDeUmCirculo(raio));
         
     }
 }
