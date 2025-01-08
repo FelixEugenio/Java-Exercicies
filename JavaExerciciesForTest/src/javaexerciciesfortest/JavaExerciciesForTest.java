@@ -50,7 +50,25 @@ public class JavaExerciciesForTest {
          
          return area =  (float) (pi * Math.pow(raio, 2));
      }
+     
+     public static int calcularOMaiorValorDoArray(int[] array){
+         
+         
+         int maior = array[0];
+         
+          // Percorre o array a partir do segundo elemento
+         for (int i = 0; i < array.length; i++) {
+             if (array[i] > maior) {
+                 maior = array[i];
+             }
+         }
+         
+         return maior;
+         
+         
+     }
     
+    @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         
         /*
@@ -200,11 +218,15 @@ public class JavaExerciciesForTest {
         
         System.out.println("o perimetro de um circulo é " + calcularPerimetroDeUmCirculo(raio));
         
-  */
+
      float raio =  (float) (1 + Math.random() * (5 -1));
         
         System.out.println("a area de um circulo é " + calcularAreaDeUmCirculo(raio));   
+        */
         
+        int[] array = {1,2,3,45,56,7,9};
+        
+        System.out.println("o maior valor do array é " + calcularOMaiorValorDoArray(array));
         
     }
 }
