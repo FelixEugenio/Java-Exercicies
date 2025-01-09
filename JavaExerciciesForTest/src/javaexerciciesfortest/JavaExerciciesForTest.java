@@ -125,6 +125,24 @@ public class JavaExerciciesForTest {
        
      }
      
+     public static void imprimirArray(int[][] array){
+         // Percorre cada linha do array
+        for (int i = 0; i < array.length; i++) {
+            // Percorre cada elemento da linha
+            for (int j = 0; j < array[i].length; j++) {
+                // Imprime o elemento, seguido de um tab
+                System.out.print(array[i][j]);
+                
+                // Se não for o último elemento da linha, imprime um tab
+                if (j < array[i].length - 1) {
+                    System.out.print("\t");
+                }
+            }
+            // Após imprimir todos os elementos da linha, pula uma linha
+            System.out.println();
+     }
+     }
+     
      
     
     @SuppressWarnings("empty-statement")
@@ -302,7 +320,7 @@ public class JavaExerciciesForTest {
         
         System.out.println("mostrar o array ordenado");
         System.out.println(Arrays.toString(numeros));
-        */
+      
         
         
         
@@ -316,5 +334,18 @@ public class JavaExerciciesForTest {
         } else {
             System.out.println("Número " + numero + " não encontrado.");
         }
+
+  */
+        
+        // Exemplo de array bidimensional
+        int[][] array = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+        
+        // Chama a função para imprimir o array
+        imprimirArray(array);
+        
     }
 }
