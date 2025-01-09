@@ -95,6 +95,37 @@ public class JavaExerciciesForTest {
              }
          }
      }
+     
+     public static int PesquisaBinaria(int[] array, int numero){
+         int inicio = 0;
+         int fim = array.length - 1;
+         
+         while(inicio <= fim ){
+             int meio = inicio + (fim - inicio) / 2;
+             
+          // Se o número for encontrado no meio
+            if (array[meio] == numero) {
+                return meio;
+            }
+            
+            // Se o número for maior, ignore a metade esquerda
+            if (array[meio] < numero) {
+                inicio = meio + 1;
+            }
+            
+            // Se o número for menor, ignore a metade direita
+            else {
+                fim = meio - 1;
+            }
+            
+            
+         }
+         // Se o número não for encontrado, retorne -1
+        return -1;
+       
+     }
+     
+     
     
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
@@ -260,7 +291,7 @@ public class JavaExerciciesForTest {
         int posicao = calcularAPosicaoDoMaiorValorDoArray(array);
         
         System.out.println("a posicao do maior valor do array é " + posicao);
-        */
+        
         
         int[] numeros = {9, 2, 5, 1, 7, 3, 4};
         System.out.println("mostrar o array desordenado");
@@ -271,6 +302,19 @@ public class JavaExerciciesForTest {
         
         System.out.println("mostrar o array ordenado");
         System.out.println(Arrays.toString(numeros));
+        */
         
+        
+        
+        int[] array = {1, 3, 5, 7, 9, 11, 13, 15, 17};
+        int numero = 7;
+
+        int resultado = PesquisaBinaria(array, numero);
+
+        if (resultado != -1) {
+            System.out.println("Número " + numero + " encontrado na posição: " + resultado);
+        } else {
+            System.out.println("Número " + numero + " não encontrado.");
+        }
     }
 }
