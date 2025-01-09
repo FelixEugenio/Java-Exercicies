@@ -143,6 +143,26 @@ public class JavaExerciciesForTest {
      }
      }
      
+     public static float[] resolverEquacaoSegundoGrau(float a, float b, float c) {
+        // Calculando o discriminante (delta)
+        float delta = b * b - 4 * a * c;
+        
+        // Verificando as possíveis condições com base no valor de delta
+        if (delta > 0) {
+            // Duas soluções reais e distintas
+            float solucao1 = (-b + (float)Math.sqrt(delta)) / (2 * a);
+            float solucao2 = (-b - (float)Math.sqrt(delta)) / (2 * a);
+            return new float[] { solucao1, solucao2 };
+        } else if (delta == 0) {
+            // Uma solução real (raízes iguais)
+            float solucao = -b / (2 * a);
+            return new float[] { solucao };
+        } else {
+            // Não há soluções reais (raízes complexas)
+            return new float[0];  // Retorna um array vazio
+        }
+    }
+     
      
     
     @SuppressWarnings("empty-statement")
@@ -335,7 +355,7 @@ public class JavaExerciciesForTest {
             System.out.println("Número " + numero + " não encontrado.");
         }
 
-  */
+  
         
         // Exemplo de array bidimensional
         int[][] array = {
@@ -347,5 +367,23 @@ public class JavaExerciciesForTest {
         // Chama a função para imprimir o array
         imprimirArray(array);
         
+       */ 
+        
+        // Exemplo de coeficientes
+        float a = 1;
+        float b = -3;
+        float c = 2;
+
+        // Chama a função para resolver a equação
+        float[] soluções = resolverEquacaoSegundoGrau(a, b, c);
+
+        // Imprime as soluções
+        if (soluções.length == 2) {
+            System.out.println("As soluções são: " + soluções[0] + " e " + soluções[1]);
+        } else if (soluções.length == 1) {
+            System.out.println("A solução única é: " + soluções[0]);
+        } else {
+            System.out.println("Não há soluções reais.");
+        }
     }
 }
