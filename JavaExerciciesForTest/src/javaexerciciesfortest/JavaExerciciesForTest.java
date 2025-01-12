@@ -125,6 +125,29 @@ public class JavaExerciciesForTest {
        
      }
      
+     public static int PesquisaBinaria2(int[] array , int numero){
+         int inicio = 0;
+         int fim = array.length -1;
+         
+         while(inicio <= fim){
+             int meio = inicio + (fim - inicio) /2;
+             
+             if(array[meio] == numero){
+                 return meio;
+             }
+             
+             if(array[meio] < numero){
+                 inicio = meio + 1;
+             }
+             
+             else{
+                 fim = meio - 1;
+             }
+         }
+         
+         return -1;
+     }
+     
      public static void imprimirArray(int[][] array){
          // Percorre cada linha do array
         for (int i = 0; i < array.length; i++) {
@@ -367,9 +390,11 @@ public class JavaExerciciesForTest {
         // Chama a função para imprimir o array
         imprimirArray(array);
         
-       */ 
+       
         
         // Exemplo de coeficientes
+        
+        
         float a = 1;
         float b = -3;
         float c = 2;
@@ -384,6 +409,18 @@ public class JavaExerciciesForTest {
             System.out.println("A solução única é: " + soluções[0]);
         } else {
             System.out.println("Não há soluções reais.");
+        }
+*/
+        
+        int[] array = {1, 3, 5, 7, 9, 11, 13, 15, 17};
+        int numero = 89;
+
+        int resultado = PesquisaBinaria2(array, numero);
+
+        if (resultado != -1) {
+            System.out.println("Número " + numero + " encontrado na posição: " + resultado);
+        } else {
+            System.out.println("Número " + numero + " não encontrado.");
         }
     }
 }
