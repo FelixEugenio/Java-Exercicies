@@ -4,6 +4,7 @@
  */
 package javaexerciciesfortest;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -198,8 +199,12 @@ public class JavaExerciciesForTest {
              for(indice = 0;indice < inteiros.length;indice++){
                  writer.println(inteiros[indice]);
              }
+             
+                      System.out.printf("\nForam escritos no ficheiro %s %d inteiros", nome_ficheiro,indice);        
+
+         }catch(IOException e){
+             System.out.println(e.getMessage());
          }
-         
          
      }
      
@@ -442,7 +447,9 @@ public class JavaExerciciesForTest {
 
 */
         
+        int[] valores = {0,1,2,3,4,5,6,7,8,9,10};
         
+        grava_Inteiros("teste.txt", valores);
         
     }
 }
