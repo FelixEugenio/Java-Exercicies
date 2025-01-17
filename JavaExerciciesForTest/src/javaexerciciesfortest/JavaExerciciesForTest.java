@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package javaexerciciesfortest;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -185,6 +187,21 @@ public class JavaExerciciesForTest {
             return new float[0];  // Retorna um array vazio
         }
     }
+     
+     public static void grava_Inteiros(String nome_ficheiro,int[] inteiros){
+         
+         int indice;
+         
+         try(PrintWriter writer = new PrintWriter(new FileWriter(nome_ficheiro))){
+             writer.println("isto é uma lista em ASCII");
+             
+             for(indice = 0;indice < inteiros.length;indice++){
+                 writer.println(inteiros[indice]);
+             }
+         }
+         
+         
+     }
      
      
     
@@ -410,7 +427,7 @@ public class JavaExerciciesForTest {
         } else {
             System.out.println("Não há soluções reais.");
         }
-*/
+
         
         int[] array = {1, 3, 5, 7, 9, 11, 13, 15, 17};
         int numero = 89;
@@ -422,5 +439,10 @@ public class JavaExerciciesForTest {
         } else {
             System.out.println("Número " + numero + " não encontrado.");
         }
+
+*/
+        
+        
+        
     }
 }
