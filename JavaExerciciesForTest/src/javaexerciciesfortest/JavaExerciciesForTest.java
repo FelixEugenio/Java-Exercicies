@@ -450,6 +450,7 @@ public class JavaExerciciesForTest {
         int[] valores = {0,1,2,3,4,5,6,7,8,9,10};
         
         grava_Inteiros("teste.txt", valores);
+        grava_Inteiros("teste.txt", valores);
         
     }
 }
